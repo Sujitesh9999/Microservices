@@ -16,6 +16,7 @@
 
                 var response = result.Adapt<CreateProductResponse>();
                 return Results.Created($"/products/{response.Id}", response);
+
             })
                 .WithName("CreateProduct")
                 .Produces<CreateProductResponse>(StatusCodes.Status201Created)
